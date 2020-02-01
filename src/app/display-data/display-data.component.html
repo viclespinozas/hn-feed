@@ -1,1 +1,16 @@
-<li class="list-group-item">{{ news.storyTitle }}</li>
+<!-- <li class="list-group-item">{{ news.storyTitle }}</li> -->
+
+<table class="table table-hover">
+  <tbody>
+    <tr *ngFor="let item of news; let i=index">
+      <td>
+        <span class="font-color-dark-grey font-size-md">{{ item.storyTitle }}</span>
+        <span class="font-color-light-grey font-size-md"> - {{ item.author }} - </span>
+      </td>
+      <td>
+        <span class="font-color-dark-grey font-size-md">{{ item.createdAt | date: 'HH:MM' }}</span>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

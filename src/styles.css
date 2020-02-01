@@ -9,3 +9,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .navbar-brand {
   font-size: 3.25rem;
 }
+
+.navbar-sub-brand {
+  font-size: 1.25rem;
+}
+
+.font-size-md {
+  font-size: 13pt;
+}
+
+.font-color-dark-grey {
+  color: #333;
+}
+
+.font-color-light-grey {
+  color: #999;
+}

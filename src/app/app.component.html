@@ -1,15 +1,13 @@
 <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">HN Feed</a>
-    <p>We hacker news!</p>
+    <a href="#" class="navbar-brand">
+        HN Feed
+      <p class="navbar-sub-brand">We <3 hacker news!</p>
+    </a>
   </nav>
 </div>
 <ul class="list-group">
-  <app-display-data
-  *ngFor="let item of newsList.data; let i=index"
-  [news]="item"
-  [index]="i"
-  ></app-display-data>
+  <app-display-data [news]="newsList.data"></app-display-data>
 </ul>
 <div class="container">
   <router-outlet></router-outlet>
