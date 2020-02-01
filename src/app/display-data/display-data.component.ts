@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,17 +8,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./display-data.component.css']
 })
 export class DisplayDataComponent implements OnInit {
-  news: [];
+  @Input() news: [];
+  @Input() index: number;
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
-  constructor(private httpClient: HttpClient, private router: Router) {
-    this.httpClient.get('/api/v1/news').subscribe(
-      (news: []) => {
-        this.news = news;
-      }
-    );
-  }
+  ngOnInit(): void {
 
-  ngOnInit() {
   }
 
 }

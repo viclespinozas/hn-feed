@@ -35,4 +35,11 @@
     </form>
   </div>
 </div>
-<app-display-data></app-display-data>
+<app-display-data
+*ngFor="let item of newsList.data; let i=index"
+[news]="item"
+[index]="i"
+></app-display-data>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
