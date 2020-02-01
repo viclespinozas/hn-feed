@@ -4,8 +4,10 @@
   <tbody>
     <tr *ngFor="let item of news; let i=index">
       <td>
-        <span class="font-color-dark-grey font-size-md">{{ item.storyTitle }}</span>
-        <span class="font-color-light-grey font-size-md"> - {{ item.author }} - </span>
+        <a href="{{ item.storyUrl }}" target="_blank">
+          <span class="font-color-dark-grey font-size-md">{{ item.storyTitle }}</span>
+          <span class="font-color-light-grey font-size-md"> - {{ item.author }} - </span>
+        </a>
       </td>
       <td>
         <span class="font-color-dark-grey font-size-md">{{ item.createdAt | date: 'HH:MM' }}</span>
